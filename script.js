@@ -1,4 +1,5 @@
 // alert("este es  tu juego")
+alert('prueba de ramas');
 
 const palabra =["j","u","e","g","o"]
 
