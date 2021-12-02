@@ -11,7 +11,6 @@ function procesando(){
     for(const i in palabra){
         if(letra==palabra[i]){
             alert("la letra si se encuentra dentro de la palabra en la posicion")
-            break
         }
         else if ( letra !== palabra[i]){
             alert("la letra no se encuentra dentro de la palabra")
@@ -36,3 +35,5 @@ function procesando(){
 //     }
 
 // }
+const palabra2 = new String("programacion")
+console.log(palabra2)
