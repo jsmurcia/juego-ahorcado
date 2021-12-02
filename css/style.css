@@ -1,0 +1,31 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+.contenedor__letras{
+    width: 55rem;
+    height: 10rem;
+    background-color: aqua;
+    border: 5px solid #000;
+    display:flex;
+    margin: 20px,auto;
+    margin-top: 40px;
+
+}
+
+.contenedor__letras-j,
+.contenedor__letras-u,
+.contenedor__letras-e,
+.contenedor__letras-g,
+.contenedor__letras-o{
+    width: 18%;
+    height: 8rem;
+    border-bottom: 5px solid #000;
+   
+    margin: 1%;
+}
