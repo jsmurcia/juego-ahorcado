@@ -29,3 +29,8 @@ body{
    
     margin: 1%;
 }
+
+.letra{
+    font-size: 70px;
+    text-align: center;
+}
