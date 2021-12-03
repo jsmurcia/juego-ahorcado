@@ -8,19 +8,20 @@ body{
     background-image: url(../img/fondo.jfif);
 }
 .contenedor__letras{
-    width: 55rem;
+    width: 60rem;
     height: 10rem;
     background-color: #FCBA63;
     display:flex;
     margin: 20px;
     margin-top: 50px;
-
+    padding: 0 2rem;
+    border-radius: 10px;
 }
 
 .contenedor__letras-o{
     width: 18%;
     height: 8rem;
-    border-bottom: 5px solid #000;
+    border-bottom: 2px solid #000;
     margin: 1%;
 }
 
@@ -73,6 +74,13 @@ input{
     margin: 10px;
     width: 7rem;
     height: 7rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+input:hover{
+    background: #ccc;
 }
 
 #abc{

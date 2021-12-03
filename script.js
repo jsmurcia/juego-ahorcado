@@ -31,13 +31,13 @@ for(let p in palabra){
 
 // Validar si la letra existe en la palabra y colocarla en la posicion
 function procesar(letter){
-    let campoLetra = document.querySelector("#text");
+    // let campoLetra = document.querySelector("#text");
     // let letra = campoLetra.value.toLowerCase();
     let letra = letter;
 
     //Buscar el indice donde se encuentra la letra
-    let indices = [];
-    var indice = palabra.indexOf(letra);
+    let indices = [],
+    indice = palabra.indexOf(letra),
 
     while(indice != -1){
         indices.push(indice);
