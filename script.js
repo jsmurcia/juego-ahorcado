@@ -37,7 +37,7 @@ function procesar(letter){
 
     //Buscar el indice donde se encuentra la letra
     let indices = [],
-    indice = palabra.indexOf(letra),
+    indice = palabra.indexOf(letra);
 
     while(indice != -1){
         indices.push(indice);
