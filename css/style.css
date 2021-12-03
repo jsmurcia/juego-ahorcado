@@ -5,16 +5,15 @@ body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-
+    background-image: url(../img/fondo.jfif);
 }
 .contenedor__letras{
     width: 55rem;
     height: 10rem;
-    background-color: aqua;
-    border: 5px solid #000;
+    background-color: #FCBA63;
     display:flex;
-    margin: 20px,auto;
-    margin-top: 40px;
+    margin: 100px;
+    margin-top: 50px;
 
 }
 
@@ -33,4 +32,61 @@ body{
 .letra{
     font-size: 70px;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.imagen{
+position: absolute;
+width: 325px;
+height: 402px;
+left: 1108px;
+top: 80px;
+}
+.fondo{
+width: 325px;
+height: 402px;
+left: 1108px;
+top: 50px;
+left: 1108px;
+top: 50px;
+}
+h1{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 65px;
+    text-transform: capitalize;
+    color: #93d4ff;
+}
+h2{
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    font-size: 45px;
+    color: red;
+    text-transform: capitalize;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000a6;
+}
+
+input{
+    font-size: 30px;
+    margin: 10px;
+    width: 7rem;
+    height: 7rem;
+}
+
+#abc{
+    width: 50%;
+}
+
+#reset{
+    padding: 15px;
+    background-color: #93d4ff;
+    border: none;
+    font-size: 20px;
 }

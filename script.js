@@ -1,6 +1,6 @@
 // Contenedor de la palabra y palabras para el juego
-const contenedor = document.querySelector('.contenedor__letras');
-const palabras = ['gato', 'juego', 'plato', 'camino', 'jirafa', 'cooperar'];
+const contenedor = document.querySelector('.contenedor__letras'),
+palabras = ['gato', 'juego', 'plato', 'camino', 'jirafa', 'cooperar'];
 
 // Obtener palabra random de la lista
 let palabra = palabras[Math.floor((Math.random() * palabras.length))];
@@ -12,13 +12,16 @@ let posiciones = document.getElementsByClassName('letra');
 let vidas = 6;
 
 // ABCEDARIO
-const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-const contenedorAbc = document.getElementById('abc');
+const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
+contenedorAbc = document.getElementById('abc');
 
-// Dibuja los botones
+// Dibuja los botones con las letras
 for(let abcedario in abc){
     contenedorAbc.innerHTML += `<input type="button" value="${abc[abcedario]}" onclick="procesar('${abc[abcedario]}')">`;
 }
+
+// Variables de aciertos
+let aciertos = 0;
 
 // Validar si la letra existe en la palabra y colocarla en la posicion
 function procesar(letter){
@@ -40,9 +43,19 @@ function procesar(letter){
         posiciones[indices[i]].innerText = letra;
     }
 
+    if(indices.length != 0){
+        aciertos += indices.length;
+        if(aciertos == palabra.length){
+            document.getElementById('gameover').innerText = 'YouWin';
+            contenedorAbc.innerHTML = null;
+        }
+        console.log(aciertos);
+    }
+
     // Quita vidas cuando se equivocan de palabra 
     if(indices.length == 0){
         vidas--;
+
     }
 
     // Si las vidas se acaban pierde y se quita el teclado para que no agregue más letras
