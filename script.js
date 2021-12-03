@@ -15,13 +15,19 @@ let vidas = 6;
 const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
 contenedorAbc = document.getElementById('abc');
 
+// Variables de aciertos
+let aciertos = 0;
+
 // Dibuja los botones con las letras
 for(let abcedario in abc){
     contenedorAbc.innerHTML += `<input type="button" value="${abc[abcedario]}" onclick="procesar('${abc[abcedario]}')">`;
 }
 
-// Variables de aciertos
-let aciertos = 0;
+// Dibuja las lineas en pantalla
+// console.log(palabra);
+for(let p in palabra){
+    contenedor.innerHTML += `<div class="contenedor__letras-o letra"></div>`;
+}
 
 // Validar si la letra existe en la palabra y colocarla en la posicion
 function procesar(letter){
@@ -48,14 +54,14 @@ function procesar(letter){
         if(aciertos == palabra.length){
             document.getElementById('gameover').innerText = 'YouWin';
             contenedorAbc.innerHTML = null;
+            document.getElementById('ahorcado').innerHTML = null;
         }
-        console.log(aciertos);
     }
 
     // Quita vidas cuando se equivocan de palabra 
     if(indices.length == 0){
         vidas--;
-
+        document.getElementById('ahorcado').innerHTML = `<img src="img/${vidas}.jpg">`
     }
 
     // Si las vidas se acaban pierde y se quita el teclado para que no agregue más letras
@@ -63,10 +69,4 @@ function procesar(letter){
         document.getElementById('gameover').innerText = 'GameOver';
         contenedorAbc.innerHTML = null;
     }
-}
-
-// Dibuja las lineas en pantalla
-console.log(palabra);
-for(let p in palabra){
-    contenedor.innerHTML += `<div class="contenedor__letras-o letra"></div>`;
 }
